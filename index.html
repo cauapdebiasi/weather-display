@@ -3,28 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>Cool weather app</title>
   </head>
   <body>
     <div id="app">
-      <h1>Cool Weather API ✨</h1>
-      <form class="city-form">
-        <div class="input-wrapper">
-          <label for="api">Api</label>
-          <select id="api">
-          </select>
-        </div>
-        <div class="input-wrapper">
-          <label for="city">Cidade</label>
-          <input id="city" type="text" placeholder="Cidade,UF,País">
-        </div>
-        <button type="button">Buscar</button>  
-      </form>
+      <div class="introduction">
+        <h1>Cool Weather API ✨</h1>
+        <form class="city-form">
+          <div class="input-wrapper">
+            <label for="api">Api</label>
+            <select id="api">
+            </select>
+          </div>
+          <div class="input-wrapper">
+            <label for="city">Cidade</label>
+            <input id="city" type="text" placeholder="Cidade,UF,País">
+          </div>
+          <button type="button">Buscar</button>  
+        </form>
+      </div>
+      
 
       <main>
+        <div class="placeholder">
+          <img class="penguin" src="/penguin.png" alt="">
+          <p class="placeholder-text">As condições vão aparecer aqui, mas enquanto isso vamos apreciar este belo pinguin</p>
+        </div>
       </main>
       
-      
+      <p class="footer">Desenvolvido por <a target="_blank" href="https://github.com/cauapdebiasi">Cauã Piuccho Debiasi</a></p>
     </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
