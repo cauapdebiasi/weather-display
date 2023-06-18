@@ -19,6 +19,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -36,7 +37,8 @@ h1 {
   line-height: 1.1;
 }
 
-input, select {
+input,
+select {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -70,8 +72,25 @@ input, select {
   text-align: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 2fr 1fr;
-  grid-template-areas: "intro result" "footer footer";
+  grid-template-rows: auto 2fr 1fr;
+  grid-template-areas: "address address"
+                       "intro result" 
+                       "footer footer";
+}
+
+.address {
+  grid-area: address;
+  text-align: center;
+  margin-bottom: 20px !important;
+  font-size: 32px;
+  width: 100%;
+  place-self: center;
+  padding: 0 !important;
+}
+
+.address>p {
+  margin: 0;
+  padding: 0;
 }
 
 .introduction {
@@ -82,7 +101,7 @@ input, select {
   grid-area: intro;
 }
 
-.introduction > h1 {
+.introduction>h1 {
   margin: 0 0 10px 0;
   font-size: 40px;
 }
@@ -151,11 +170,13 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover,
 input:hover,
 select:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible,
 input:focus,
@@ -170,9 +191,11 @@ select:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
@@ -187,12 +210,15 @@ select:focus-visible {
   color: #747bff;
   animation: dot-floating 3s infinite cubic-bezier(0.15, 0.6, 0.9, 0.1);
 }
-.dot-floating::before, .dot-floating::after {
+
+.dot-floating::before,
+.dot-floating::after {
   content: "";
   display: inline-block;
   position: absolute;
   top: 0;
 }
+
 .dot-floating::before {
   left: -12px;
   width: 10px;
@@ -202,6 +228,7 @@ select:focus-visible {
   color: #747bff;
   animation: dot-floating-before 3s infinite ease-in-out;
 }
+
 .dot-floating::after {
   left: -24px;
   width: 10px;
@@ -216,37 +243,47 @@ select:focus-visible {
   0% {
     left: calc(-50% - 5px);
   }
+
   75% {
     left: calc(50% + 105px);
   }
+
   100% {
     left: calc(50% + 105px);
   }
 }
+
 @keyframes dot-floating-before {
   0% {
     left: -50px;
   }
+
   50% {
     left: -12px;
   }
+
   75% {
     left: -50px;
   }
+
   100% {
     left: -50px;
   }
 }
+
 @keyframes dot-floating-after {
   0% {
     left: -100px;
   }
+
   50% {
     left: -24px;
   }
+
   75% {
     left: -100px;
   }
+
   100% {
     left: -100px;
   }
@@ -271,10 +308,11 @@ select:focus-visible {
   body {
     place-items: initial;
   }
+
   #app {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3,max-content);
-    grid-template-areas: "intro" "result" "footer";
+    grid-template-rows: repeat(3, max-content);
+    grid-template-areas: "address" "intro" "result" "footer";
     row-gap: 10px;
   }
 

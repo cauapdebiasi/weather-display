@@ -3,6 +3,7 @@ import env from "../env";
 
 export default {
     baseUrl: "http://api.weatherapi.com/v1/current.json",
+    cityQueryParam: "q",
     params: {
         key: env.WEATHER_API_KEY,
         lang: "pt",

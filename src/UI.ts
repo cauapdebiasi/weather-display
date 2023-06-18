@@ -10,7 +10,8 @@ export default class UI {
   constructor(
     private contentWrapperEl: HTMLElement,
     private apiServicesEl: HTMLElement,
-    private cityFormEl: HTMLElement
+    private cityFormEl: HTMLElement,
+    private addressWrapperEl: HTMLElement
   ) {}
 
   public renderWeather(provider: string, weatherData: Weather): void {
@@ -47,5 +48,9 @@ export default class UI {
 
   private updatecontentWrapperEl(template: string) {
     this.contentWrapperEl.innerHTML = template;
+  }
+
+  public updateAddress(address: string) {
+    this.addressWrapperEl.innerHTML = address;
   }
 }

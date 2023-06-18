@@ -19,8 +19,8 @@ export class Api {
   public async fetchWeather(api: string, city: string): Promise<Weather> {
     const selectedApi = this._apiServices[api]
     const params = new URLSearchParams(selectedApi.params);
-    params.set("q", city);
-  
+    params.set(selectedApi.cityQueryParam, city)
+
     const response = await fetch(`${selectedApi.baseUrl}?${params.toString()}`);
     const data = await response.json();
   

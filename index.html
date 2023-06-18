@@ -6,20 +6,26 @@
     <title>Cool weather app</title>
   </head>
   <body>
+    
+
     <div id="app">
+      <section class="address stage">
+        <p>Obtendo ip...</p>
+        <div class="dot-floating"></div>
+      </section>
       <div class="introduction">
         <h1>Cool Weather API ✨</h1>
         <form class="city-form">
           <div class="input-wrapper">
             <label for="api">Api</label>
-            <select id="api">
+            <select id="api" required>
             </select>
           </div>
           <div class="input-wrapper">
             <label for="city">Cidade</label>
-            <input id="city" type="text" placeholder="Cidade,UF,País">
+            <input id="city" type="text" placeholder="Cidade,UF,País" required>
           </div>
-          <button type="button">Buscar</button>  
+          <button type="submit">Buscar</button>  
         </form>
       </div>
       

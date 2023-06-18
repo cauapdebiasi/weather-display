@@ -3,6 +3,7 @@ import env from "../env";
 
 export default {
     baseUrl: "https://api.openweathermap.org/data/2.5/weather",
+    cityQueryParam: "q",
     params: {
         exclude: "minutely,hourly,daily,alerts",
         appid: env.OPEN_WEATHER_API_KEY,
